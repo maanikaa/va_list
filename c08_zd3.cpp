@@ -18,16 +18,11 @@ double suma (unsigned int n, ...)
 
 int main ()
 {	
-	int ilosc;
-	cout << "Podaj ilość liczb, których średnią chcesz policzyć: ";
-	cin  >> ilosc;
-	cout << "Podaj te liczby: " << endl;
-	double *wartosci = new double [ilosc];
-	for (int obrotnik = 0; obrotnik <= ilosc-1; obrotnik++)
-		cin  >> wartosci[obrotnik];
+	int ilosc = 3;
+	double a = 2.4, b = 3.45, c = 9.8;
 	
-	cout << "Suma podanych liczb to: " << suma (ilosc, wartosci[ilosc]) << endl;
+	cout << "Suma liczb " << a << ", " << b << ", "  << c << " to: ";
+	cout << suma (ilosc, a, b, c) << endl;
 	
-	delete []wartosci;
 	return 0;
 }
